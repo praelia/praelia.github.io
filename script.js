@@ -8,6 +8,7 @@ document.addEventListener('keydown', (event) => {
         console.log('You are authorized');
         currentIndex = 0;
         document.getElementById('frame').innerHTML = '<iframe src="https://praelia.github.io/world"></iframe>';
+        element.removeEventListener('keydown');
       }
     } else {
       currentIndex = 0; 
