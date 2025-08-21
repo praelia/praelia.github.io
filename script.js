@@ -7,7 +7,7 @@ document.addEventListener('keydown', (event) => {
       if (currentIndex === sequence.length) {
         console.log('You are authorized');
         currentIndex = 0;
-        document.getElementById('frame').innerHTML = '<iframe src="https://praelia.github.io/world"></iframe>';
+        document.getElementById('frame').removeAttribute("hidden");
         element.removeEventListener('keydown');
       }
     } else {
