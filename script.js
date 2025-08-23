@@ -18,6 +18,11 @@ document.addEventListener('keydown', (event) => {
 document.getElementById('frame').addEventListener('load', function () {
     const iframeDocument = this.contentDocument || this.contentWindow.document;
     iframeDocument.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' || event.key === 'Esc')  {document.getElementById('frame').setAttribute("hidden", true);}
+        if (event.key === 'Escape' || event.key === 'Esc')  {}
     });
+});
+window.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'escapePressed') {
+    document.getElementById('frame').setAttribute("hidden", true);
+  }
 });
