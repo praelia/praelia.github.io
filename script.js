@@ -1,5 +1,4 @@
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' || event.key === 'Esc')  {document.getElementById('frame').setAttribute("hidden", true);}
   const sequence = ['g', 'a', 'm', 'e'];
   let currentIndex = 0;
   document.addEventListener('keydown', (event) => {
@@ -15,4 +14,10 @@ document.addEventListener('keydown', (event) => {
       currentIndex = 0; 
     }
   });
+});
+document.getElementById('frame').addEventListener('load', function () {
+    const iframeDocument = this.contentDocument || this.contentWindow.document;
+    iframeDocument.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' || event.key === 'Esc')  {document.getElementById('frame').setAttribute("hidden", true);}
+    });
 });
