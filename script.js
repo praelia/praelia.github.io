@@ -20,9 +20,3 @@ window.addEventListener("message", (event) => {
   document.getElementById('frame').setAttribute("hidden", true);
   alert('done');
 });
-document.getElementById('frame').addEventListener('load', function () {
-    const iframeDocument = this.contentDocument || this.contentWindow.document;
-    iframeDocument.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' || event.key === 'Esc')  {}
-    });
-});
