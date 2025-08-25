@@ -1,4 +1,5 @@
 document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' || event.key === 'Esc')  {document.getElementById('frame').setAttribute("hidden", true);}
   const sequence = ['g', 'a', 'm', 'e'];
   let currentIndex = 0;
   document.addEventListener('keydown', (event) => {
