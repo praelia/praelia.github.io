@@ -21,8 +21,8 @@ document.getElementById('frame').addEventListener('load', function () {
         if (event.key === 'Escape' || event.key === 'Esc')  {}
     });
 });
-window.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'escapePressed') {
-    document.getElementById('frame').setAttribute("hidden", true);
-  }
+window.addEventListener("message", function(event) {
+  alert('recieved');
+  document.getElementById('frame').setAttribute("hidden", true);
+  alert('done');
 });
