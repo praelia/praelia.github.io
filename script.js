@@ -16,7 +16,5 @@ document.addEventListener('keydown', (event) => {
   });
 });
 window.addEventListener("message", (event) => {
-  alert('recieved');
   document.getElementById('frame').setAttribute("hidden", true);
-  alert('done');
 });
